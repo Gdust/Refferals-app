@@ -17,7 +17,8 @@ Template.postEdit.events({
     
     var currentPostId = this._id;
     var postProperties = {
-      
+      url: $(e.target).find('[name=url]').val(),
+      description: $(e.target).find('[name=description]').val(),
       title: $(e.target).find('[name=title]').val(),
       private: $("input[name='private']:checked").val()
       

@@ -8,5 +8,18 @@ Template.header.helpers({
     });
     
     return active && 'active';
+  },
+  Gdust() {
+  	var Gdust = Meteor.users.findOne()._id;
+  	try{
+  	
+  	if(Gdust == "dhY9LJKavkDAdFnQz") {
+  		return true;
+  	} 
+  } catch (e) {
+
+  		console.log(e);
+  	
   }
+  	}
 });

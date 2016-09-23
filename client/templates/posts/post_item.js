@@ -21,6 +21,9 @@ Template.postItem.helpers({
       lastname: Meteor.users.findOne().profile.lastname
     }
     return profile.firstname + ' ' + profile.lastname;
+  },
+  ref() {
+    return ' перейти и получить информацию';
   }
 });
 

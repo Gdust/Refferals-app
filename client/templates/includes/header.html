@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{pathFor 'home'}}">Microscope</a>
+      <a class="navbar-brand" href="{{pathFor 'home'}}">Adproducts</a>
     </div>
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
@@ -17,16 +17,18 @@
         <li class="{{activeRouteClass  'bestPosts'}}">
           <a href="{{pathFor 'bestPosts'}}">Best</a>
         </li>
-        {{#if currentUser}}
+        {{#if Gdust}}
           <li class="{{activeRouteClass 'postSubmit'}}">
             <a href="{{pathFor 'postSubmit'}}">Submit Post</a>
           </li>
           <li class="{{activeRouteClass  'privatePosts'}}">
           <a href="{{pathFor 'privatePosts'}}">Private</a>
         </li>
-          <li class="{{activeRouteClass 'profile'}}">
+        {{/if}}
+        {{#if currentUser}}
+        <!--   <li class="{{activeRouteClass 'profile'}}">
             <a href="{{pathFor 'profile'}}">Profile</a>
-          </li>
+          </li> -->
           <li class="dropdown">
             {{> notifications}}
           </li>
@@ -34,15 +36,15 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
        {{#if currentUser}}
-        <li class="{{activeRouteClass 'login'}}">
-            <a href="{{pathFor 'login'}}">Log out</a>
+        <li class="{{activeRouteClass 'loginTemplate'}}">
+            <a href="{{pathFor 'loginTemplate'}}">Log out</a>
           </li>
        {{else}}
-        <li class="{{activeRouteClass 'register'}}">
-            <a href="{{pathFor 'register'}}">Register</a>
+        <li class="{{activeRouteClass 'registerTemplate'}}">
+            <a href="{{pathFor 'registerTemplate'}}">Register</a>
           </li>
-        <li class="{{activeRouteClass 'login'}}">
-            <a href="{{pathFor 'login'}}">Log in</a>
+        <li class="{{activeRouteClass 'loginTemplate'}}">
+            <a href="{{pathFor 'loginTemplate'}}">Log in</a>
           </li>
          
           {{/if}}

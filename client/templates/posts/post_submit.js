@@ -17,8 +17,8 @@ Template.postSubmit.events({
     e.preventDefault();
     var value = ('true' === $(".chk").val() );
     var post = {
-      // url: $(e.target).find('[name=url]').val(),
-      // url: 'test',
+      url: $(e.target).find('[name=url]').val(),
+      description: $(e.target).find('[name=description]').val(),
       title: $(e.target).find('[name=title]').val(),
       private: Number($("input[name='private']:checked").val())
       // chk: $('input[name=chk]:checkbox:checked').val() ? true : false
