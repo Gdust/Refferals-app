@@ -14,6 +14,13 @@ Template.postItem.helpers({
     } else {
       return 'disabled';
     }
+  },
+  profile: function() {
+    var profile = {
+      firstname: Meteor.users.findOne().profile.firstname,
+      lastname: Meteor.users.findOne().profile.lastname
+    }
+    return profile.firstname + ' ' + profile.lastname;
   }
 });
 

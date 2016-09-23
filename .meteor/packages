@@ -24,5 +24,9 @@ sacha:spin
 accounts-password
 ian:accounts-ui-bootstrap-3
 check
-audit-argument-checks
+#audit-argument-checks
 session
+themeteorchef:jquery-validation
+kit:sweetalert
+meteor
+chrismbeckett:toastr

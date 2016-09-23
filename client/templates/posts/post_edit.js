@@ -16,14 +16,15 @@ Template.postEdit.events({
     e.preventDefault();
     
     var currentPostId = this._id;
-    
     var postProperties = {
-      url: $(e.target).find('[name=url]').val(),
-      title: $(e.target).find('[name=title]').val()
+      
+      title: $(e.target).find('[name=title]').val(),
+      private: $("input[name='private']:checked").val()
+      
     }
     
     var errors = validatePost(postProperties);
-    if (errors.title || errors.url)
+    if (errors.title || errors.private)
       return Session.set('postEditErrors', errors);
     
     Posts.update(currentPostId, {$set: postProperties}, function(error) {
@@ -45,4 +46,27 @@ Template.postEdit.events({
       Router.go('home');
     }
   }
+//   'click .make_private': function(e){
+//     e.preventDefault();
+
+//     var currentPostId = this._id;
+//     var postProperties = {
+      
+//       title: $(e.target).find('[name=title]').val(),
+//       // private: true
+//     }
+
+// var errors = privatePost(postProperties);
+//     if (errors.private)
+//       return Session.set('postEditErrors', errors);
+
+//       Posts.update(currentPostId, {$set: postProperties}, function(error) {
+//       if (error) {
+//         // display the error to the user
+//         throwError(error.reason);
+//       } else {
+//         Router.go('postPage', {_id: currentPostId});
+//       }
+//     });
+//   }
 });

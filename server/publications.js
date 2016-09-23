@@ -11,6 +11,11 @@ Meteor.publish('singlePost', function(id) {
   return Posts.find(id);
 });
 
+Meteor.publish('privatePosts', function() {
+   // check(private, Number);
+  return Posts.find({userId: this.userId, private: 1});
+});
+
 
 Meteor.publish('comments', function(postId) {
   check(postId, String);
