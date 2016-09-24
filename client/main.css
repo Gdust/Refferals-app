@@ -11,10 +11,11 @@ body {
   /*background: #eee;*/
     background: url('http://www.evropa.nikopol.net/fon1/background_8.jpg');
 
-  color: #666666; }
-.img-overlay{
-   background: #eee;
+  color: #666666; 
 }
+/*.img-overlay{
+   background: #eee;
+}*/
 #main {
   position: relative;
 }
@@ -22,6 +23,9 @@ body {
   position: absolute;
   top: 0px;
   width: 100%;
+}
+.a:hover,.a:focus{
+  color: rgba(13, 43, 140, 1);
 }
 
 .navbar {
@@ -106,14 +110,14 @@ body {
 .load-more {
   display: block;
   border-radius: 3px;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.4);
   text-align: center;
   height: 60px;
   line-height: 60px;
   margin-bottom: 10px; }
   .load-more:hover {
     text-decoration: none;
-    background: rgba(0, 0, 0, 0.1); }
+    background: rgba(0, 0, 0, 0.6); }
 
 .posts .spinner-container{
   position: relative;
