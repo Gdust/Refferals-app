@@ -1,16 +1,17 @@
 <template name="postItem">
   <div class="post">
     <a href="#" class="upvote btn btn-default {{upvotedClass}}">👍</a>
-    <img style="width:400px;height:400px" src="{{image}}" />
+    <!-- <img style="width:400px;height:400px" src="{{image}}" /> -->
     <div class="post-content">
       <h3>
       <a href="{{url}}">{{title}}</a>
       <span><a style="color: grey" href="{{url}}">&#8592;{{ref}}</a></span>
       </h3>
+      <p><img style="width:50%" src="{{image}}" /></p>
       <strong>
       {{description}}
       </strong>
-      <!-- <p><img style="width:60%" src="{{image}}" /></p> -->
+      
       <p>
         {{pluralize votes "Vote"}},
         submitted by {{author}},
