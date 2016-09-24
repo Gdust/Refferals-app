@@ -13,7 +13,7 @@ Template.header.helpers({
   	var Gdust = Meteor.users.findOne()._id;
   	try{
   	
-  	if(Gdust == "dhY9LJKavkDAdFnQz") {
+  	if(Gdust == "D2jGE756QqZyZfSBZ") {
   		return true;
   	} 
   } catch (e) {
