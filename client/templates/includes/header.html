@@ -12,10 +12,10 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         <li class="{{activeRouteClass 'home' 'newPosts'}}">
-          <a href="{{pathFor 'newPosts'}}">New</a>
+          <a href="{{pathFor 'newPosts'}}">Новые</a>
         </li>
         <li class="{{activeRouteClass  'bestPosts'}}">
-          <a href="{{pathFor 'bestPosts'}}">Best</a>
+          <a href="{{pathFor 'bestPosts'}}">Лучшие</a>
         </li>
         {{#if Gdust}}
           <li class="{{activeRouteClass 'postSubmit'}}">
@@ -37,14 +37,14 @@
       <ul class="nav navbar-nav navbar-right">
        {{#if currentUser}}
         <li class="{{activeRouteClass 'loginTemplate'}}">
-            <a href="{{pathFor 'loginTemplate'}}">Log out</a>
+            <a href="{{pathFor 'loginTemplate'}}">Выйти</a>
           </li>
        {{else}}
         <li class="{{activeRouteClass 'registerTemplate'}}">
-            <a href="{{pathFor 'registerTemplate'}}">Register</a>
+            <a href="{{pathFor 'registerTemplate'}}">Зарегистрироваться</a>
           </li>
         <li class="{{activeRouteClass 'loginTemplate'}}">
-            <a href="{{pathFor 'loginTemplate'}}">Log in</a>
+            <a href="{{pathFor 'loginTemplate'}}">Войти</a>
           </li>
          
           {{/if}}
