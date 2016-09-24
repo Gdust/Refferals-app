@@ -15,16 +15,16 @@
       </div>
     </div>
        <div class="form-group {{errorClass 'description'}}">
-      <label class="control-label" for="description">Context</label>
+      <label class="control-label" for="description">Description</label>
       <div class="controls">
-          <input name="description" id="description" type="text" value="" placeholder="Your description" class="form-control"/>
+          <input name="description" id="description" type="text" value="{{description}}" placeholder="Your description" class="form-control"/>
           <span class="help-block">{{errorMessage 'description'}}</span>
       </div>
     </div>
      <div class="form-group {{errorClass 'image'}}">
       <label class="control-label" for="image">Image</label>
       <div class="controls col-lg-2">
-          <input name="image" id="image" type="file" value="" placeholder="Your image" class="form-control"/>
+          <input name="image" id="image" type="file" value="{{image}}" placeholder="Your image" class="form-control"/>
           <span class="help-block">{{errorMessage 'image'}}</span>
       </div>
     </div>
