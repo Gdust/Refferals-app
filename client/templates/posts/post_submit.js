@@ -20,8 +20,8 @@ Template.postSubmit.events({
       url: $(e.target).find('[name=url]').val(),
       description: $(e.target).find('[name=description]').val(),
       title: $(e.target).find('[name=title]').val(),
-      private: Number($("input[name='private']:checked").val())
-      // chk: $('input[name=chk]:checkbox:checked').val() ? true : false
+      private: Number($("input[name='private']:checked").val()),
+      image: $(e.target).find('[name=image]').val()
     };
     
     // var errors = validatePost(post);

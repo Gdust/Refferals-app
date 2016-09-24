@@ -20,7 +20,8 @@ Template.postEdit.events({
       url: $(e.target).find('[name=url]').val(),
       description: $(e.target).find('[name=description]').val(),
       title: $(e.target).find('[name=title]').val(),
-      private: $("input[name='private']:checked").val()
+      private: $("input[name='private']:checked").val(),
+      image: $(e.target).find('[name=image]').val()
       
     }
     
