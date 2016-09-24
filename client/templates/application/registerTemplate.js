@@ -152,7 +152,7 @@ Template.registerTemplate.onRendered(function(){
 
                 else {
                                 console.log('login ');
-                                Router.go('login');                                
+                                Router.go('loginTemplate');                                
                             }
                
             });
