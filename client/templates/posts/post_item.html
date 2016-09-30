@@ -12,14 +12,19 @@
       <a href="{{url}}">
       <img style="width:235px" class="img-responsive" src="{{image}}" />
       </a>
+      <strong>
+      {{description}}
+      </strong>
       </p>
       {{/if}}
       
+      {{#unless image}}
       <div style="margin-top:5px">
       <strong>
       {{description}}
       </strong>
       </div>
+      {{/unless}}
       
       
       <p style="padding-top:10px">
