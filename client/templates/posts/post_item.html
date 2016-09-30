@@ -7,18 +7,26 @@
       <a href="{{url}}">{{title}}</a>
       <span><a style="color: grey" href="{{url}}">&#8592;{{ref}}</a></span>
       </h3>
-      {{#if image}}
+      
       <p>
+      {{#if image}}
       <a href="{{url}}">
       <img style="width:235px; float:left" class="img-responsive" src="{{image}}" />
       </a>
+      {{/if}}
+
       <strong>
       {{description}}
       </strong>
+      <p style="padding-top:10px">
+        {{pluralize votes "Vote"}},
+        submitted by {{author}},
+        <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
+        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
       </p>
-      {{/if}}
+      </p>
       
-      {{#unless image}}
+   <!--    {{#unless image}}
       <div style="margin-top:5px;margin-left:5px">
       <strong>
       {{description}}
@@ -30,7 +38,7 @@
         <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
         {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
       </p>
-      {{/unless}}
+      {{/unless}} -->
       </div>
 
     <!--   <p style="padding-top:10px">
