@@ -19,20 +19,26 @@
       {{/if}}
       
       {{#unless image}}
-      <div style="margin-top:5px">
+      <div style="margin-top:5px;margin-left:5px">
       <strong>
       {{description}}
       </strong>
       </div>
-      {{/unless}}
-      </div>
-      
-      <!-- <p style="padding-top:10px"> -->
+        <p style="padding-top:10px">
         {{pluralize votes "Vote"}},
         submitted by {{author}},
         <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
         {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
-      <!-- </p> -->
+      </p>
+      {{/unless}}
+      </div>
+
+    <!--   <p style="padding-top:10px">
+        {{pluralize votes "Vote"}},
+        submitted by {{author}},
+        <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
+        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+      </p> -->
     
     <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Обсудить</a>
   </div>
