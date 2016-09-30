@@ -10,7 +10,7 @@
       {{#if image}}
       <p>
       <a href="{{url}}">
-      <img style="width:235px" class="img-responsive" src="{{image}}" />
+      <img style="width:235px; float:left" class="img-responsive" src="{{image}}" />
       </a>
       <strong>
       {{description}}
@@ -25,7 +25,7 @@
       </strong>
       </div>
       {{/unless}}
-      
+      </div>
       
       <p style="padding-top:10px">
         {{pluralize votes "Vote"}},
@@ -33,7 +33,7 @@
         <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
         {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
       </p>
-    </div>
+    
     <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Обсудить</a>
   </div>
 </template>
