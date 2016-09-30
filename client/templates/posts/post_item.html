@@ -27,12 +27,12 @@
       {{/unless}}
       </div>
       
-      <p style="padding-top:10px">
+      <!-- <p style="padding-top:10px"> -->
         {{pluralize votes "Vote"}},
         submitted by {{author}},
         <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
         {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
-      </p>
+      <!-- </p> -->
     
     <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Обсудить</a>
   </div>
