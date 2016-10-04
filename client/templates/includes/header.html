@@ -23,14 +23,14 @@
         <li class="{{activeRouteClass  'bestPosts'}}">
           <a href="{{pathFor 'bestPosts'}}">Лучшие</a>
         </li>
-        <!-- {{#if Gdust}} -->
+        {{#if Gdust}}
           <li class="{{activeRouteClass 'postSubmit'}}">
             <a href="{{pathFor 'postSubmit'}}">Submit Post</a>
           </li>
           <li class="{{activeRouteClass  'privatePosts'}}">
           <a href="{{pathFor 'privatePosts'}}">Private</a>
         </li>
-        <!-- {{/if}} -->
+        {{/if}}
         {{#if currentUser}}
         <!--   <li class="{{activeRouteClass 'profile'}}">
             <a href="{{pathFor 'profile'}}">Profile</a>
