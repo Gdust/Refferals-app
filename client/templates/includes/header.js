@@ -9,17 +9,19 @@ Template.header.helpers({
     
     return active && 'active';
   },
-  Gdust() {
-  	var Gdust = Meteor.users.findOne()._id;
-  	try{
+  // Gdust() {
+  // 	var Gdust = Meteor.users.findOne()._id;
+  // 	try{
   	
-  	if(Gdust == "D2jGE756QqZyZfSBZ") {
-  		return true;
-  	} 
-  } catch (e) {
+  // 	if(Gdust == "D2jGE756QqZyZfSBZ") {
+  // 		return true;
+  // 	} 
+  // } catch (e) {
 
-  		console.log(e);
+  // 		console.log(e);
   	
-  }
-  	}
+  // }
+  // 	}
+
+  
 });

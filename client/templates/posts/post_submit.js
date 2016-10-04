@@ -20,7 +20,7 @@ Template.postSubmit.events({
       url: $(e.target).find('[name=url]').val(),
       description: $(e.target).find('[name=description]').val(),
       title: $(e.target).find('[name=title]').val(),
-      private: Number($("input[name='private']:checked").val()),
+      private: Number($("input[name='private']:checked").val()) ? Number($("input[name='private']:checked").val()) : 0,
       image: $(e.target).find('[name=image]').val()
     };
     

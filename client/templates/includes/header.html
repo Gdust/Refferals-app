@@ -1,6 +1,9 @@
 <template name="header">
+<!-- <div class="container">
+<div class="row"> -->
   <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
+
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -9,22 +12,25 @@
       </button>
       <a class="navbar-brand" href="{{pathFor 'home'}}">Системы заработка</a>
     </div>
+
     <div class="collapse navbar-collapse" id="navigation">
+
       <ul class="nav navbar-nav">
+
         <li class="{{activeRouteClass 'home' 'newPosts'}}">
           <a href="{{pathFor 'newPosts'}}">Новые</a>
         </li>
         <li class="{{activeRouteClass  'bestPosts'}}">
           <a href="{{pathFor 'bestPosts'}}">Лучшие</a>
         </li>
-        {{#if Gdust}}
+        <!-- {{#if Gdust}} -->
           <li class="{{activeRouteClass 'postSubmit'}}">
             <a href="{{pathFor 'postSubmit'}}">Submit Post</a>
           </li>
           <li class="{{activeRouteClass  'privatePosts'}}">
           <a href="{{pathFor 'privatePosts'}}">Private</a>
         </li>
-        {{/if}}
+        <!-- {{/if}} -->
         {{#if currentUser}}
         <!--   <li class="{{activeRouteClass 'profile'}}">
             <a href="{{pathFor 'profile'}}">Profile</a>
@@ -33,6 +39,7 @@
             {{> notifications}}
           </li>
         {{/if}}
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
        {{#if currentUser}}
@@ -51,5 +58,8 @@
         <!-- {{> loginButtons}} -->
       </ul>
     </div>
+
   </nav>
+  <!-- </div>
+  </div> -->
 </template>
