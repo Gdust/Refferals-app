@@ -23,7 +23,7 @@ Template.postItem.helpers({
     return profile.firstname + ' ' + profile.lastname;
   },
   ref() {
-    return ' перейти и получить информацию';
+    return ' get more info';
   }
 });
 
