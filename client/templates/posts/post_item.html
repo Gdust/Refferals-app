@@ -1,4 +1,6 @@
 <template name="postItem">
+<div class="content">
+<div class="row">
   <div class="post">
     <a href="#" class="upvote btn btn-default {{upvotedClass}}">👍</a>
     <!-- <img style="width:400px;height:400px" src="{{image}}" /> -->
@@ -11,14 +13,16 @@
       <p>
       {{#if image}}
       <a href="{{url}}">
-      <img style="width:235px; float:left; margin-right: 10px" class="img-responsive" src="{{image}}" />
+      <img style="width:235px; margin-right: 10px" class="img-responsive" src="{{image}}" />
       </a>
       {{/if}}
 
 <div style="padding-top:15px">
+      <p>
       <strong>
       {{description}}
       </strong>
+      </p>
 </div>
       <p style="margin-left:5px;padding-top:10px">
         {{pluralize votes "Vote"}},
@@ -51,5 +55,7 @@
       </p> -->
     
     <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
+  </div>
+  </div>
   </div>
 </template>

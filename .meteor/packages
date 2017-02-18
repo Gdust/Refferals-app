@@ -31,3 +31,4 @@ kit:sweetalert
 meteor@1.2.17
 chrismbeckett:toastr
 shell-server
+momentjs:moment

@@ -9,9 +9,10 @@ register: function (user) {
            
 
 
-            // make sure the username not exists!
+            // make sure the username or email doesn't exist!
             if (Meteor.users.findOne({username: user.username}))
             {
+                console.log('Username already exists!');
                 return {err:'Username already exists!', status:false};
             }
             console.log('register server 1');

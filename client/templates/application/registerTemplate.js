@@ -105,27 +105,27 @@ Template.registerTemplate.onRendered(function(){
                 // "identity": $('input[name=profile]:checked', '#registerForm').val()
             }
                 Meteor.call('register', user, function(err, data) {
-                // if (!data || !data.status) {
-                //     Command: toastr["error"]("Register failed", data.err)
-                //     toastr.options = {
-                //     "closeButton": false,
-                //     "debug": false,
-                //     "newestOnTop": false,
-                //     "progressBar": false,
-                //     "positionClass": "toast-top-center",
-                //     "preventDuplicates": false,
-                //     "onclick": null,
-                //     "showDuration": "300",
-                //     "hideDuration": "1000",
-                //     "timeOut": "5000",
-                //     "extendedTimeOut": "1000",
-                //     "showEasing": "swing",
-                //     "hideEasing": "linear",
-                //     "showMethod": "fadeIn",
-                //     "hideMethod": "fadeOut"
-                //     }
-                //     console.log('register KO ' + data.err);
-                // } 
+                if (!data || !data.status) {
+                    Command: toastr["error"]("Register failed", data.err)
+                    toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": false,
+                    "positionClass": "toast-top-center",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                    }
+                    console.log('register KO ' + data.err);
+                } 
 
                 if (err){
                     // Command: toastr["error"]("error", "Register")
